@@ -1,0 +1,10 @@
+{
+  "name": "products-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "author": "Wendy Lee"
+}
