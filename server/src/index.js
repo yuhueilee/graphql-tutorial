@@ -1,10 +1,5 @@
 import { ApolloServer, gql } from "apollo-server";
 
-const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-});
-
 // Parses the defined GraphQL schema.
 const typeDefs = gql`
     type Query {
@@ -17,6 +12,11 @@ const resolvers = {
         appName: () => "ProductHunt clone", // implements the appName query
     },
 };
+
+const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+});
 
 server.listen().then(() => {
     console.log("Listening on port 4000");
