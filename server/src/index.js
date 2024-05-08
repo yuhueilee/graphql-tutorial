@@ -1,14 +1,9 @@
 import { ApolloServer } from "apollo-server";
 import readSchema from "./schema.js";
+import { resolvers } from "./resolver.js";
 
 // Parses the defined GraphQL schema.
 const typeDefs = readSchema();
-
-const resolvers = {
-    Query: {
-        appName: () => "ProductHunt clone", // implements the appName query
-    },
-};
 
 const server = new ApolloServer({
     typeDefs,
