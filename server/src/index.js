@@ -1,4 +1,5 @@
 import { ApolloServer } from "apollo-server";
+import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import readSchema from "./schema.js";
 import { resolvers } from "./resolver.js";
 
@@ -8,6 +9,7 @@ const typeDefs = readSchema();
 const server = new ApolloServer({
     typeDefs,
     resolvers,
+    plugins: [ApolloServerPluginLandingPageGraphQLPlayground],
 });
 
 server.listen().then(() => {
