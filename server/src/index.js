@@ -1,11 +1,8 @@
-import { ApolloServer, gql } from "apollo-server";
+import { ApolloServer } from "apollo-server";
+import readSchema from "./schema.js";
 
 // Parses the defined GraphQL schema.
-const typeDefs = gql`
-    type Query {
-        appName: String
-    }
-`;
+const typeDefs = readSchema();
 
 const resolvers = {
     Query: {
