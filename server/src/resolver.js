@@ -2,6 +2,14 @@ export const resolvers = {
     Query: {
         appName: () => "ProductHunt clone", // implements the appName query
         allProducts: () => productsData,
+        productsByAuthor: (_, args) => {
+            const user = usersData.find(
+                (user) => user.userName === args.authorName
+            );
+            return productsData.filter(
+                (product) => product.authorId === user.id
+            );
+        },
     },
     // Specifies how to get fields for the "Product" type
     Product: {
