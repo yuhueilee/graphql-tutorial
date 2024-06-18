@@ -41,3 +41,13 @@ type User {
   "full name of a user"
   fullName: String!,
 }
+
+"Category's information"
+type Category {
+  "unique identifier of a category"
+  id: ID!
+  "a URL-friendly category name"
+  slug: String!
+  "name of a category"
+  name: String!
+}
