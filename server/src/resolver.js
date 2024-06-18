@@ -15,6 +15,11 @@ export const resolvers = {
         author: (product) => {
             return usersData.find((user) => user.id === product.authorId);
         },
+        categories: (product) => {
+            return product.categoriesIds.map((id) =>
+                categoriesData.find((category) => category.id === id)
+            );
+        },
     },
 };
 
