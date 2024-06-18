@@ -1,20 +1,43 @@
 type Query {
+  """
+  Get the name of this application
+  """
   appName: String
+  """
+  Get all posted products
+  """
   allProducts: [Product!]!
-  productsByAuthor(authorName: String!): [Product!]!
+  """
+  Get all products published by an author
+  """
+  productsByAuthor(
+    "author's username"
+    authorName: String!
+  ): [Product!]!
 }
 
+"Product's information" 
 type Product {
+  "name of a product"
   name: String!,
+  "description of a product"
   description: String!,
+  "url of a product"
   url: String!,
+  "number of votes of a product"
   numberOfVotes: Int!,
+  "publish time of a product"
   publishedAt: String!,
+  "product's author"
   author: User!,
 }
 
+"User's information"
 type User {
+  "unique identifier of a user"
   id: ID!,
+  "user name of a user"
   userName: String!,
+  "full name of a user"
   fullName: String!,
 }
