@@ -26,6 +26,7 @@ const productsData = [
         numberOfVotes: 10,
         publishedAt: "2021-04-05",
         authorId: "1",
+        categoriesIds: ["1"],
     },
     {
         name: "Apollo",
@@ -34,6 +35,7 @@ const productsData = [
         numberOfVotes: 5,
         publishedAt: "2021-01-08",
         authorId: "2",
+        categoriesIds: ["2", "3"],
     },
     {
         name: "OneGraph",
@@ -42,6 +44,7 @@ const productsData = [
         numberOfVotes: 5,
         publishedAt: "2020-08-22",
         authorId: "1",
+        categoriesIds: ["3"],
     },
 ];
 
@@ -55,5 +58,23 @@ const usersData = [
         id: "2",
         userName: "peter",
         fullName: "Peter Miles",
+    },
+];
+
+const categoriesData = [
+    {
+        id: "1",
+        slug: "education",
+        name: "Education",
+    },
+    {
+        id: "2",
+        slug: "frameworks",
+        name: "Frameworks",
+    },
+    {
+        id: "3",
+        slug: "api",
+        name: "API",
     },
 ];
