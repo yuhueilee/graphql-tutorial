@@ -2,10 +2,8 @@ export const resolvers = {
     Query: {
         appName: () => "ProductHunt clone", // implements the appName query
         allProducts: () => productsData,
-        productsByAuthor: (_, args) => {
-            const user = usersData.find(
-                (user) => user.userName === args.authorName
-            );
+        productsByAuthor: (_, { authorName }) => {
+            const user = usersData.find((user) => user.userName === authorName);
             return productsData.filter(
                 (product) => product.authorId === user.id
             );
