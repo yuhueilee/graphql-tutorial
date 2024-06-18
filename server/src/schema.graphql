@@ -14,6 +14,13 @@ type Query {
     "author's username"
     authorName: String!
   ): [Product!]!
+  """
+  Get all products belong to a category
+  """
+  productsByCategory(
+    "category's slug"
+    slug: String!
+  ): [Product!]!
 }
 
 "Product's information" 

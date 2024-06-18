@@ -9,6 +9,15 @@ export const resolvers = {
                 (product) => product.authorId === user.id
             );
         },
+        productsByCategory: (_, { slug }) => {
+            const category = categoriesData.find(
+                (category) => category.slug === slug
+            );
+            // Filter products where one of its categories IDs matches with the input category ID
+            return productsData.filter((product) =>
+                product.categoriesIds.includes(category.id)
+            );
+        },
     },
     // Specifies how to get fields for the "Product" type
     Product: {
