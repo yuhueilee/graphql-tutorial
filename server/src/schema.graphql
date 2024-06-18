@@ -30,6 +30,8 @@ type Product {
   publishedAt: String!,
   "product's author"
   author: User!,
+  "categories of a product"
+  categories: [Category!]!
 }
 
 "User's information"
