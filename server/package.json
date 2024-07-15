@@ -10,6 +10,7 @@
   "author": "Wendy Lee",
   "dependencies": {
     "apollo-server": "^3.13.0",
+    "mongo-seeding": "^4.0.0",
     "mongoose": "^8.5.1",
     "pino": "^9.2.0",
     "pino-pretty": "^11.2.1"
