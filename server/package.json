@@ -6,7 +6,7 @@
   "main": "src/index.js",
   "scripts": {
     "preinstall": "source $HOME/.nvm/nvm.sh; nvm use v20.14.0",
-    "start": "nodemon src/index.js"
+    "start": "source $HOME/.nvm/nvm.sh; nvm use v20.14.0; nodemon src/index.js"
   },
   "author": "Wendy Lee",
   "dependencies": {
