@@ -1,9 +1,9 @@
 db.createUser({
-    user: "user",
+    user: "admin",
     pwd: "pass",
     roles: [
         {
-            role: "dbOwner",
+            role: "root",
             db: "products-db",
         },
     ],
